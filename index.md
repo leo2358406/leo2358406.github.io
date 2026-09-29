@@ -1,4 +1,4 @@
-# Welcome to My Portfolio Hello! My name is Leo.
+# Welcome to My Portfolio! My name is Leo.
 ## Projects
 - Project 1: A Pygame game about dodging bulls running down from the top of the screen. Built in Pygame with Brave Browser's search AI, Leo AI.
   - [Play Project 1](game.html)
