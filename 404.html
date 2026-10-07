@@ -1,0 +1,130 @@
+---
+layout: default
+permalink: /404.html
+---
+
+<div class="error-page">
+
+  <div class="error-orb"></div>
+
+  <div class="error-content">
+
+    <span class="eyebrow">
+      ERROR / 404
+    </span>
+
+    <h1>
+      LOST IN THE
+      <span>NEON.</span>
+    </h1>
+
+    <p>
+      The page you're looking for doesn't exist.
+      Maybe it got deleted. Maybe it never existed.
+      Maybe it's still compiling.
+    </p>
+
+    <a
+      class="neon-button primary"
+      href="{{ '/' | relative_url }}"
+    >
+      RETURN HOME
+      <span>↗</span>
+    </a>
+
+  </div>
+
+</div>
+
+<style>
+
+.error-page {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+
+}
+
+.error-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+
+}
+
+.error-content h1 {
+
+  font-family: var(--font-display);
+
+  font-size: clamp(60px, 10vw, 120px);
+
+  line-height: .9;
+
+  letter-spacing: -.07em;
+
+  margin: 20px 0 25px;
+
+}
+
+.error-content h1 span {
+
+  display: block;
+
+  color: var(--cyan);
+
+  text-shadow:
+    0 0 15px var(--cyan),
+    0 0 60px rgba(0,240,255,.35);
+
+}
+
+.error-content p {
+
+  color: var(--text-muted);
+
+  max-width: 450px;
+
+  margin: 0 auto 30px;
+
+}
+
+.error-content .neon-button {
+
+  display: inline-flex;
+
+}
+
+.error-orb {
+
+  position: fixed;
+
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,240,255,.18),
+      rgba(139,92,246,.08),
+      transparent 70%
+    );
+
+  filter: blur(30px);
+
+}
+
+</style>

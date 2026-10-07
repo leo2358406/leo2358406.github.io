@@ -1,0 +1,80 @@
+<article
+  class="repo-card reveal"
+  style="--project-color: {{ include.project.color | default: '#00f0ff' }};"
+>
+
+  <div class="repo-glow"></div>
+
+  <div class="repo-top">
+
+    <div class="repo-icon">
+      ◈
+    </div>
+
+    {% if include.project.featured %}
+
+      <span class="featured-badge">
+        FEATURED
+      </span>
+
+    {% endif %}
+
+  </div>
+
+
+  <div class="repo-content">
+
+    <h3>
+      {{ include.project.name }}
+    </h3>
+
+    <p>
+      {{ include.project.description }}
+    </p>
+
+  </div>
+
+
+  <div class="repo-footer">
+
+    <span
+      class="language"
+      style="--language-color: {{ include.project.color | default: '#00f0ff' }};"
+    >
+
+      <span class="language-dot"></span>
+
+      {{ include.project.language }}
+
+    </span>
+
+
+    <div class="repo-links">
+
+      {% if include.project.live != "" %}
+
+        <a
+          href="{{ include.project.live }}"
+          target="_blank"
+          rel="noopener"
+          aria-label="View live project"
+        >
+          LIVE ↗
+        </a>
+
+      {% endif %}
+
+      <a
+        href="{{ include.project.url }}"
+        target="_blank"
+        rel="noopener"
+        aria-label="View {{ include.project.name }} on GitHub"
+      >
+        CODE ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</article>

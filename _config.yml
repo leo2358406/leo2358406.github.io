@@ -1,5 +1,43 @@
 title: My Wrangler Studios Portfolio
-description: This is my portfolio showcasing my projects and skills.
+description: A collection of my projects and experiments.
 baseurl: "" # leave empty since this is your user page
 url: "https://leo2358406.github.io" # replace YOURUSERNAME with your GitHub username
 theme: jekyll-theme-hacker # replace “merlot” with your chosen theme from the list
+
+author:
+  name: "Leo2358406"
+  github: "leo2358406"
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Keep Jekyll from processing unnecessary files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Your projects
+# Add new repositories here whenever you want.
+projects:
+
+  - name: "leo2358406.github.io"
+    description: "My personal website and the home of my projects."
+    url: "https://github.com/leo2358406/leo2358406.github.io"
+    live: "https://leo2358406.github.io"
+    language: "HTML"
+    color: "#ff4dff"
+    featured: true
+
+  # Example:
+  #
+  # - name: "My Awesome Project"
+  #   description: "A short description of what this project does."
+  #   url: "https://github.com/leo2358406/my-awesome-project"
+  #   live: ""
+  #   language: "Python"
+  #   color: "#39ff88"
+  #   featured: false
