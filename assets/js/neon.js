@@ -1,3 +1,8 @@
+document.documentElement.classList.add("js-ready");
+
+
+const revealElements =
+  document.querySelectorAll(".reveal");
 
 
 const observer =
@@ -24,9 +29,7 @@ const observer =
 
 
 revealElements.forEach((element) => {
-
   observer.observe(element);
-
 });
 
 
