@@ -1,3 +1,8 @@
+---
+title: Projects
+permalink: /projects/
+---
+
 <div class="portfolio-projects">
 
   <div class="projects-heading">
