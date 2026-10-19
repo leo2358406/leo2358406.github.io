@@ -10,16 +10,20 @@ layout: default
 
   <section class="projects-section" id="projects">
 
-    <div class="section-heading reveal">
-      <div>
-        <span class="eyebrow">02 / PROJECTS</span>
-        <h2>Things I've <span class="gradient-text">built.</span></h2>
-      </div>
-
-      <span class="project-count">
-        {{ site.projects.size | prepend: "0" | slice: -2, 2 }} PROJECTS
-      </span>
+  <div class="section-heading reveal">
+    <div>
+      <span class="eyebrow">01 / PROJECTS</span>
+      <h2>Things I've <span class="gradient-text">built.</span></h2>
     </div>
+
+  <a class="view-all-projects" href="{{ '/projects/' | relative_url }}">
+    VIEW ALL PROJECTS <span aria-hidden="true">↗</span>
+  </a>
+
+  <span class="project-count">
+    {{ site.projects.size | prepend: "0" | slice: -2, 2 }} PROJECTS
+  </span>
+  </div>
 
     <div class="project-grid">
 
@@ -35,6 +39,13 @@ layout: default
 
 
   <section class="about-section" id="about">
+
+  <div class="section-heading reveal">
+    <div>
+      <span class="eyebrow">02 / ABOUT</span>
+      <h2>A little about <span class="gradient-text">me.</span></h2>
+    </div>
+  </div>
 
     <div class="about-terminal reveal">
 
@@ -108,9 +119,9 @@ layout: default
     </span>
 
     <a
-      href="https://github.com/{{ site.author.github }}"
-      target="_blank"
-      rel="noopener"
+        href="https://github.com/{{ site.author.github }}"
+        target="_blank"
+        rel="noopener"
     >
       GITHUB ↗
     </a>

@@ -1419,16 +1419,12 @@ nav > a:hover::after {
 
 }
 
+
 .terminal-body {
-
   padding: 27px;
-
   font-family: monospace;
-
   font-size: 12px;
-
-  line-height: 2;
-
+  line-height: 1.8;
 }
 
 .terminal-prompt {
@@ -1437,14 +1433,11 @@ nav > a:hover::after {
 
 }
 
+
 .terminal-output {
-
   color: #77778b;
-
-  margin-bottom: 15px;
-
+  margin: 0 0 18px;
   padding-left: 5px;
-
 }
 
 .status-line {
@@ -1454,13 +1447,11 @@ nav > a:hover::after {
 }
 
 .terminal-cursor {
-
   display: flex;
-
   align-items: center;
-
   gap: 7px;
-
+  min-height: 20px;
+  margin-top: 8px;
 }
 
 .cursor {
@@ -1652,11 +1643,18 @@ footer {
   }
 
   .section-heading {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+  }
 
-    align-items: flex-start;
+  .view-all-projects {
+  order: 3;
+  }
 
-    gap: 15px;
-
+  .project-count {
+  margin-top: 10px;
+  margin-left: auto;
   }
 
   .project-count {
@@ -1738,4 +1736,32 @@ footer {
 
   }
 
+}
+
+
+/* View All Projects button */
+.view-all-projects {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 8px;
+  color: var(--cyan);
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease,
+              box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.view-all-projects:hover {
+  background: rgba(0, 240, 255, 0.08);
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.12);
+  transform: translateY(-2px);
 }
