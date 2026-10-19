@@ -893,15 +893,11 @@ nav > a:hover::after {
 }
 
 .section-heading {
-
   display: flex;
-
   align-items: flex-end;
-
-  justify-content: space-between;
-
+  justify-content: flex-start;
+  gap: 24px;
   margin-bottom: 38px;
-
 }
 
 .eyebrow {
@@ -1420,6 +1416,8 @@ nav > a:hover::after {
 }
 
 
+
+
 .terminal-body {
   padding: 27px;
   font-family: monospace;
@@ -1427,23 +1425,23 @@ nav > a:hover::after {
   line-height: 1.8;
 }
 
-.terminal-prompt {
-
-  color: var(--cyan);
-
+.terminal-body p {
+  margin-top: 0;
+  margin-bottom: 14px;
 }
 
+.terminal-prompt {
+  color: var(--cyan);
+}
 
 .terminal-output {
   color: #77778b;
-  margin: 0 0 18px;
+  margin: 0 0 22px;
   padding-left: 5px;
 }
 
 .status-line {
-
   color: var(--green);
-
 }
 
 .terminal-cursor {
@@ -1451,7 +1449,9 @@ nav > a:hover::after {
   align-items: center;
   gap: 7px;
   min-height: 20px;
-  margin-top: 8px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  line-height: 1.8;
 }
 
 .cursor {
