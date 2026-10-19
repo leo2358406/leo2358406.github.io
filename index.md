@@ -87,15 +87,17 @@ layout: default
           status
         </p>
 
-        <p class="terminal-output status-line">
-          <span class="status-dot"></span>
-          ONLINE — READY TO BUILD
-        </p>
+        <div class="terminal-status-group">
+          <p class="terminal-output status-line">
+            <span class="status-dot"></span>
+            ONLINE — READY TO BUILD
+          </p>
 
-        <p class="terminal-cursor">
-          <span class="terminal-prompt">leo@forge:~$</span>
-          <span class="cursor"></span>
-        </p>
+          <p class="terminal-cursor">
+            <span class="terminal-prompt">leo@forge:~$</span>
+            <span class="cursor"></span>
+          </p>
+        </div>
 
       </div>
 
