@@ -1437,6 +1437,7 @@ nav > a:hover::after {
   color: var(--cyan);
 }
 
+
 .terminal-output {
   color: #77778b;
   margin: 0 0 22px;
@@ -1446,21 +1447,29 @@ nav > a:hover::after {
 .status-line {
   color: var(--green);
   display: block;
-  margin-top: 0;
-  margin-bottom: 32px;
-  padding-bottom: 8px;
+  position: static;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 32px;
+  padding: 0 0 8px 5px;
   line-height: 1.8;
+  clear: both;
 }
 
 .terminal-cursor {
   display: flex;
+  position: static;
+  box-sizing: border-box;
   align-items: center;
   gap: 7px;
+  width: 100%;
   min-height: 24px;
   margin: 0;
   padding: 0;
   line-height: 1.8;
+  clear: both;
 }
+
 
 .cursor {
   display: inline-block;

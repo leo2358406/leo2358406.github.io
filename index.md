@@ -88,10 +88,10 @@ layout: default
         </p>
 
         <div class="terminal-status-group">
-          <p class="terminal-output status-line">
+          <div class="terminal-output status-line">
             <span class="status-dot"></span>
             ONLINE — READY TO BUILD
-          </p>
+          </div>
 
           <p class="terminal-cursor">
             <span class="terminal-prompt">leo@forge:~$</span>
