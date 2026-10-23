@@ -1744,6 +1744,11 @@ footer {
 
   }
 
+  .cursor {
+    animation-duration: 1s !important;
+    animation-iteration-count: infinite !important;
+  }
+
 }
 
 
