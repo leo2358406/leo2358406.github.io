@@ -107,7 +107,9 @@ permalink: /projects/
   gap: 22px;
 }
 
+
 .project-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -116,8 +118,37 @@ permalink: /projects/
   border: 1px solid rgba(0, 245, 160, 0.2);
   border-radius: 14px;
   background: rgba(15, 23, 42, 0.55);
+  overflow: hidden;
+  isolation: isolate;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
+
+/* Mouse-following spotlight */
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(0, 245, 160, 0.14),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* Keep card content above the glow */
+.project-card > * {
+  position: relative;
+  z-index: 1;
+}
+
 
 .project-card:hover {
   border-color: #00f5a0;

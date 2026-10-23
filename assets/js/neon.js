@@ -38,7 +38,7 @@ revealElements.forEach((element) => {
  */
 
 const cards =
-  document.querySelectorAll(".repo-card");
+  document.querySelectorAll(".repo-card, .project-card");
 
 
 cards.forEach((card) => {
