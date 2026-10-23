@@ -83,33 +83,56 @@ cards.forEach((card) => {
 });
 
 
+
 /*
- * Add a subtle parallax effect to the hero orb.
+ * Add a smooth parallax effect to the hero orb.
  */
 
-const orb =
-  document.querySelector(".hero-orb");
-
+const orb = document.querySelector(".hero-orb");
 
 if (orb) {
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  let animationFrame = null;
 
-  window.addEventListener(
-    "pointermove",
-    (event) => {
+  function animateOrb() {
+    // Ease toward the target instead of jumping directly to it.
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
 
-      const x =
-        (event.clientX / window.innerWidth - 0.5);
+    orb.style.transform =
+      `translateY(-50%) translate3d(${currentX}px, ${currentY}px, 0)`;
 
-      const y =
-        (event.clientY / window.innerHeight - 0.5);
+    // Keep animating until the orb is close to its target.
+    if (
+      Math.abs(targetX - currentX) > 0.1 ||
+      Math.abs(targetY - currentY) > 0.1
+    ) {
+      animationFrame = requestAnimationFrame(animateOrb);
+    } else {
+      currentX = targetX;
+      currentY = targetY;
 
       orb.style.transform =
-        `translateY(-50%) translate(${x * 18}px, ${y * 18}px)`;
+        `translateY(-50%) translate3d(${currentX}px, ${currentY}px, 0)`;
 
+      animationFrame = null;
     }
-  );
+  }
 
+  window.addEventListener("pointermove", (event) => {
+    targetX = (event.clientX / window.innerWidth - 0.5) * 18;
+    targetY = (event.clientY / window.innerHeight - 0.5) * 18;
+
+    // Only start a new animation loop when one isn't already running.
+    if (animationFrame === null) {
+      animationFrame = requestAnimationFrame(animateOrb);
+    }
+  });
 }
+
 
 
 /*
