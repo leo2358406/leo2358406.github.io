@@ -1782,3 +1782,25 @@ footer {
   box-shadow: 0 0 6px rgba(0, 240, 255, 0.35);
   vertical-align: middle;
 }
+
+/* Desert Bull Dodge — subtle desert palette */
+.repo-card.desert-project-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(217, 154, 82, 0.13),
+      rgba(105, 70, 42, 0.09) 55%,
+      rgba(255, 255, 255, 0.018)
+    );
+  border-color: rgba(217, 154, 82, 0.25);
+}
+
+.repo-card.desert-project-card::before {
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(217, 154, 82, 0.2),
+      transparent 50%
+    );
+  opacity: 1;
+}

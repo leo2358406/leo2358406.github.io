@@ -1,7 +1,9 @@
+
 <article
-  class="repo-card reveal"
+  class="repo-card reveal{% if include.project.name == 'Desert Bull Dodge' %} desert-project-card{% endif %}"
   style="--project-color: {{ include.project.color | default: '#00f0ff' }};"
 >
+
 
   <div class="repo-glow"></div>
 

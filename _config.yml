@@ -31,6 +31,14 @@ projects:
     color: "#ff4dff"
     featured: true
 
+  - name: "Desert Bull Dodge"
+    description: "A desert-themed Python arcade game. Dodge charging bulls and see how long you can survive!"
+    url: "https://github.com/leo2358406/leo2358406.github.io"
+    live: "https://leo2358406.github.io/game.html"
+    language: "Python"
+    color: "#D99A52"
+    featured: false
+
   # Example:
   #
   # - name: "My Awesome Project"
