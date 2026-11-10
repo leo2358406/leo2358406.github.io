@@ -39,6 +39,14 @@ projects:
     color: "#D99A52"
     featured: false
 
+  - name: "Web Safety Game"
+    description: "An interactive browser game teaching internet ethics, online law, and digital safety."
+    url: "https://github.com/leo2358406/Web-Safety-Game"
+    live: "https://leo2358406.github.io/Web-Safety-Game/index.html"
+    language: "HTML · JavaScript"
+    color: "#00D9FF"
+    featured: false
+
   # Example:
   #
   # - name: "My Awesome Project"
