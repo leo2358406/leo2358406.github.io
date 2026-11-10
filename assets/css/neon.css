@@ -1816,3 +1816,398 @@ footer {
     );
   opacity: 1;
 }
+
+
+/* ==========================================
+   PROJECT SHOWCASE PAGE
+   ========================================== */
+
+.portfolio-projects {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 100px 0 70px;
+}
+
+.projects-heading {
+  margin-bottom: 75px;
+}
+
+.projects-heading .eyebrow {
+  color: var(--cyan);
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+.projects-heading h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  margin: 15px 0;
+}
+
+.projects-heading h1 .accent {
+  color: var(--cyan);
+}
+
+.projects-intro {
+  max-width: 620px;
+  color: #9999ad;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* Individual project showcases */
+
+.showcase-project {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 65px);
+  padding: 55px 0;
+  margin-bottom: 45px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.showcase-visual {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  border-radius: 16px;
+  background: rgba(12, 18, 32, 0.8);
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.06);
+}
+
+.showcase-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visual-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 16px 13px;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.showcase-content {
+  min-width: 0;
+}
+
+.project-type {
+  color: var(--cyan);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.showcase-content h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  margin: 12px 0;
+  line-height: 1.15;
+}
+
+.showcase-content h2 span {
+  color: var(--cyan);
+}
+
+.project-tech {
+  color: #85859b;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.project-summary {
+  color: #c4c4d1;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.project-story {
+  margin-top: 28px;
+}
+
+.project-story h3 {
+  font-size: 14px;
+  margin: 23px 0 8px;
+  color: #e5e5ef;
+}
+
+.project-story p {
+  color: #9999ad;
+  font-size: 13px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* Project buttons */
+
+.showcase-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.showcase-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 19px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.25s ease;
+}
+
+.primary-button {
+  color: #071018;
+  background: var(--cyan);
+  border: 1px solid var(--cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.18);
+}
+
+.primary-button:hover {
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+.secondary-button {
+  color: var(--cyan);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  background: rgba(0, 240, 255, 0.035);
+}
+
+.secondary-button:hover {
+  background: rgba(0, 240, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Personal Website — purple theme */
+
+.website-project {
+  --showcase-color: #B58AFF;
+}
+
+.website-project .project-type,
+.website-project h2 span {
+  color: var(--showcase-color);
+}
+
+.website-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-color: rgba(181, 138, 255, 0.3);
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(110, 70, 180, 0.22),
+      transparent 65%
+    ),
+    #0c1020;
+}
+
+
+/* Reuse the original atom design, recolored purple */
+
+.website-orb {
+  position: relative;
+  width: min(100%, 420px);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: websiteAtomShake 5s ease-in-out infinite;
+}
+
+/* Purple glowing core */
+
+.website-visual .orb-core {
+  background:
+    radial-gradient(
+      circle,
+      white 0%,
+      #DCC8FF 5%,
+      #B58AFF 28%,
+      rgba(139, 92, 246, 0.15) 62%,
+      transparent 72%
+    );
+
+  box-shadow:
+    0 0 40px #B58AFF,
+    0 0 100px rgba(139, 92, 246, 0.6);
+}
+
+/* Purple orbital rings */
+
+.website-visual .ring-one {
+  border-color: rgba(181, 138, 255, 0.55);
+  box-shadow: 0 0 20px rgba(181, 138, 255, 0.15);
+}
+
+.website-visual .ring-two {
+  border-color: rgba(139, 92, 246, 0.45);
+}
+
+.website-visual .ring-three {
+  border-color: rgba(210, 170, 255, 0.3);
+}
+
+/* Very subtle movement of the entire atom */
+
+@keyframes websiteAtomShake {
+  0%, 100% {
+    translate: 0 0;
+  }
+  25% {
+    translate: 1px -2px;
+  }
+  50% {
+    translate: -1px 1px;
+  }
+  75% {
+    translate: 1px 1px;
+  }
+}
+
+.website-project .visual-caption {
+  color: #d7baff;
+  text-align: center;
+}
+
+.website-project .showcase-visual {
+  box-shadow: 0 0 35px rgba(181, 138, 255, 0.09);
+}
+
+/* Desert Bull Dodge — warm desert theme */
+
+.desert-project {
+  --showcase-color: #D99A52;
+}
+
+.desert-project .project-type,
+.desert-project h2 span {
+  color: var(--showcase-color);
+}
+
+.desert-visual {
+  border-color: rgba(217, 154, 82, 0.35);
+  box-shadow: 0 0 35px rgba(217, 154, 82, 0.09);
+}
+
+.desert-button {
+  background: #D99A52;
+  border-color: #D99A52;
+  box-shadow: 0 0 15px rgba(217, 154, 82, 0.2);
+}
+
+.desert-button:hover {
+  box-shadow: 0 0 25px rgba(217, 154, 82, 0.45);
+}
+
+/* Web Safety — cyan/blue theme */
+
+.safety-project {
+  --showcase-color: #00D9FF;
+}
+
+.safety-project .project-type,
+.safety-project h2 span {
+  color: var(--showcase-color);
+}
+
+.safety-visual {
+  border-color: rgba(0, 217, 255, 0.3);
+  box-shadow: 0 0 35px rgba(0, 217, 255, 0.08);
+}
+
+.safety-button {
+  background: #00D9FF;
+  border-color: #00D9FF;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
+}
+
+.safety-button:hover {
+  box-shadow: 0 0 25px rgba(0, 217, 255, 0.4);
+}
+
+/* Alternate the second project */
+
+.desert-project .showcase-visual {
+  order: 2;
+}
+
+.desert-project .showcase-content {
+  order: 1;
+}
+
+/* Back to home */
+
+.projects-footer {
+  padding-top: 35px;
+  text-align: center;
+}
+
+.projects-footer a {
+  color: var(--cyan);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+/* Mobile layout */
+
+@media (max-width: 800px) {
+  .portfolio-projects {
+    padding-top: 65px;
+  }
+
+  .projects-heading {
+    margin-bottom: 35px;
+  }
+
+  .showcase-project {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 35px 0;
+    margin-bottom: 20px;
+  }
+
+  .desert-project .showcase-visual,
+  .desert-project .showcase-content {
+    order: initial;
+  }
+
+  .showcase-content h2 {
+    font-size: 32px;
+  }
+
+  .showcase-visual {
+    aspect-ratio: 16 / 10;
+  }
+
+  .website-orb {
+    transform: scale(0.85);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .website-orb {
+    animation: none;
+  }
+
+  .showcase-button {
+    transition: none;
+  }
+}
