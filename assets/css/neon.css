@@ -2021,6 +2021,9 @@ footer {
 
 /* Reuse the original atom design, recolored purple */
 
+
+/* Personal Website atom — purple animated version */
+
 .website-orb {
   position: relative;
   width: min(100%, 420px);
@@ -2030,8 +2033,6 @@ footer {
   justify-content: center;
   animation: websiteAtomShake 5s ease-in-out infinite;
 }
-
-/* Purple glowing core */
 
 .website-visual .orb-core {
   background:
@@ -2047,24 +2048,69 @@ footer {
   box-shadow:
     0 0 40px #B58AFF,
     0 0 100px rgba(139, 92, 246, 0.6);
-}
 
-/* Purple orbital rings */
+  animation: websiteCorePulse 4s ease-in-out infinite;
+}
 
 .website-visual .ring-one {
   border-color: rgba(181, 138, 255, 0.55);
   box-shadow: 0 0 20px rgba(181, 138, 255, 0.15);
+  animation: websiteOrbitOne 8s linear infinite;
 }
 
 .website-visual .ring-two {
   border-color: rgba(139, 92, 246, 0.45);
+  animation: websiteOrbitTwo 12s linear infinite reverse;
 }
 
 .website-visual .ring-three {
   border-color: rgba(210, 170, 255, 0.3);
+  animation: websiteOrbitThree 16s linear infinite;
 }
 
-/* Very subtle movement of the entire atom */
+/* Core pulse */
+
+@keyframes websiteCorePulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* Orbital rotations */
+
+@keyframes websiteOrbitOne {
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotateX(65deg)
+      rotateZ(360deg);
+  }
+}
+
+@keyframes websiteOrbitTwo {
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotateX(65deg)
+      rotateY(45deg)
+      rotateZ(-360deg);
+  }
+}
+
+@keyframes websiteOrbitThree {
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotateX(70deg)
+      rotateY(-45deg)
+      rotateZ(360deg);
+  }
+}
+
+/* Gentle movement of the complete atom */
 
 @keyframes websiteAtomShake {
   0%, 100% {
@@ -2080,6 +2126,7 @@ footer {
     translate: 1px 1px;
   }
 }
+
 
 .website-project .visual-caption {
   color: #d7baff;
@@ -2203,7 +2250,9 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .website-orb {
+  .website-orb,
+  .website-visual .orb-core,
+  .website-visual .orb-ring {
     animation: none;
   }
 
